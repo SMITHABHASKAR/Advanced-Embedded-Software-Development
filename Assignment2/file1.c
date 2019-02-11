@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+
 int main()
 {
 	
@@ -10,6 +12,11 @@ int main()
 
 	printf("Assignment 2 is being executed where we learn how to use buildroot and system calls!");//Task 1
 	fp=fopen("Problem 2.txt","w"); //Task 2 & 3
+	
+	if(fp==NULL)
+	{
+		printf("File hasn't been created \n\r");
+	}
 	printf("\n \r Enter the character to be written to the file \n");
 	while((in1=getchar())!='\n')
 	{
@@ -19,17 +26,17 @@ int main()
 	fclose(fp);
 	
 	fp=fopen("Problem 2.txt","a"); //Opening in append mode
-	str=(char *) malloc (50);
-	printf("\nEnter a string");
-	gets(str);
-	fprintf(fp,"\n string entered by the user:%s",str);
+	
+	fflush(fp);
 	fclose(fp);
 
 	fp=fopen("Problem 2.txt","r");
 	c=getc(fp);
 	printf("\n The first character from file %c ",c);
-	sting=fgets(s,50,fp);
-	printf("\n The string from file %s \n",sting);
+	char * string1=(char *)malloc(sizeof(char)*50);
+	char string2[100];
+	string1 =fgets(string2,50,fp);
+	printf("\n The string from file %s \n",string1);
 	fclose(fp);
 	return 0;
 }
