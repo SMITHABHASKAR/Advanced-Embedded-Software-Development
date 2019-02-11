@@ -23,7 +23,7 @@ int main()
 		}
 	fprintf(fp,"Unsorted list is : ");
 	for( i = 0 ; i<MAX ; i++){
-		printf("%d ", strtbuff[i]);
+		fprintf(fp,"%d ", strtbuff[i]);
 		}
     printf("\n");	
 
