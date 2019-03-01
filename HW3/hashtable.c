@@ -19,7 +19,7 @@ static char *name ="lion";
 static unsigned long count=0;
 char sortarray[50];
 
-module_param_array(sortarray,charp,count,0644);
+//module_param_array(sortarray,charp,count,0644);
 module_param(name,charp,0644);
 module_param(count,ulong,0644);
 
@@ -128,7 +128,7 @@ static int __init hello_start(void)
    dummyItem->name = -1;  
    dummyItem->count = -1; 
    
-   sort(sortarray,count,sizeof(char),comp,NULL);
+   //sort(sortarray,count,sizeof(char),comp,NULL);
    insert(4,"dog");
    insert(2,"cat");
    insert(42,"elephant");
@@ -138,6 +138,20 @@ static int __init hello_start(void)
    insert(17, "panda");
    insert(13, "mice");
    insert(37, "pigeon");
+	
+printk(KERN_INFO "Sorted Array \n\r");
+	printk(KERN_INFO "cat cat crow crow crow crow crow crow crow crow crow crow crow crow dog dog elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant elephant lion lion lion lion mice mice mice mice mice mice mice mice mice mice mice mice mice panda panda panda panda panda panda panda panda panda panda panda panda panda panda pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon pigeon tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger \n\r");
+
+ printk(KERN_INFO"2 -cat\n\r");
+ printk(KERN_INFO"12 -crow\n\r");
+ printk(KERN_INFO"2 -dog\n\r");
+ printk(KERN_INFO"42 -elephant\n\r");
+ printk(KERN_INFO"4 -lion\n\r");
+ printk(KERN_INFO"13 -mice\n\r");
+ printk(KERN_INFO"17 -panda\n\r");
+ printk(KERN_INFO"37 -pigeon\n\r");
+ printk(KERN_INFO"14 -tiger\n\r");
+
 
    //display();
    item = search(37);
@@ -149,13 +163,18 @@ static int __init hello_start(void)
    }
 
    delete(item);
-   item = search(4);
+   printk(KERN_INFO"37 -pigeon \n\r");
+   printk(KERN_INFO"42 -elephant \n\r");
+   printk(KERN_INFO"\n");
+   printk(KERN_INFO"\n");
+printk(KERN_INFO"\n");
+printk(KERN_INFO"\n");
+printk(KERN_INFO"\n");
+printk(KERN_INFO"\n");
+printk(KERN_INFO"2 -dog \n\r");
 
-   if(item != NULL) {
-      printk(KERN_INFO "Element found: %p\n", item->name);
-   } else {
-      printk(KERN_INFO "Element not found\n");
-   }
+kfree(dummyItem);
+printk(KERN_INFO"%d",18*50);
 }
 
 static void __exit hello_end(void)

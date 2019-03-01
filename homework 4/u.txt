@@ -1,0 +1,36 @@
+POSIX Thread ID:-512764160 Linux Thread ID:19822
+a 1478
+b 648
+c 825
+d 1020
+e 2607
+f 493
+g 867
+h 971
+i 1589
+j 26
+k 155
+l 856
+m 535
+n 1443
+o 1912
+p 530
+q 4
+r 1458
+s 1377
+t 2155
+u 784
+v 182
+w 318
+x 84
+y 396
+z 12
+Child thread 2
+POSIX Thread ID:-521156864 Linux Thread ID:19823
+
+Idle for : 9.491788 ms of the time.
+Idle for : 99.995745 ms of the time.
+Idle for : 99.995499 ms of the time.
+Idle for : 99.995559 ms of the time.
+Idle for : 99.995517 ms of the time.Executing child thread 2 with POSIX Thread ID:-521156864 Linux Thread ID:19823
+
