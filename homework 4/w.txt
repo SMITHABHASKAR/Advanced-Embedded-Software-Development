@@ -1,31 +1,0 @@
-POSIX Thread ID:-110676224 Linux Thread ID:19813
-a 1478
-b 648
-c 825
-d 1020
-e 2607
-f 493
-g 867
-h 971
-i 1589
-j 26
-k 155
-l 856
-m 535
-n 1443
-o 1912
-p 530
-q 4
-r 1458
-s 1377
-t 2155
-u 784
-v 182
-w 318
-x 84
-y 396
-z 12
-Child thread 2
-POSIX Thread ID:-119068928 Linux Thread ID:19814
-Executing child thread 2 with POSIX Thread ID:-119068928 Linux Thread ID:19814
-
